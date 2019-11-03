@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import MainLayout from '../components/layouts/mainLayout'
+import myStyles from '../myStyles/main.css'
+
 
 class Home extends Component {
   // getInitialProps is executing on server first and is always expect an object
@@ -40,7 +42,7 @@ class Home extends Component {
     return (
       <>
         <MainLayout>
-          <h1>Welcome to my new next.js page</h1>
+          <h1 className={myStyles.stupid}>Welcome to my new next.js page</h1>
         </MainLayout>
       </>
     )
