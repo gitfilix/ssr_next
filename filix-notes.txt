@@ -1,0 +1,7 @@
+--------------------
++++ FLX notes +++
+--------------------
+
+
+
+getInitialProps  is for server side
