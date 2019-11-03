@@ -4,7 +4,7 @@ import MainLayout from '../components/layouts/mainLayout'
 
 class Home extends Component {
   // getInitialProps is executing on server first and is always expect an object
-  static async getInitialProps() {
+  static async getInitialProps(context) {
     let userData;
 
     try {
@@ -15,6 +15,7 @@ class Home extends Component {
       console.error('getInitialProps Error');
     }
 
+    console.log('context', context);
 
     return {
       user: {
@@ -36,7 +37,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log('render: state user', this.state);
     return (
       <>
         <MainLayout>
