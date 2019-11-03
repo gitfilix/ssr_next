@@ -12,9 +12,11 @@ const MainLayout = (props) => (
       <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' />
       <link rel='stylesheet' href='/static/css/global.css' />
     </Head>
-    <div className='container mainLayout'>
+    <div className='mainLayout_container'>
       <Header />
-      {props.children}
+      <div className='container'>
+        {props.children}
+      </div>
     </div>
   </>
 )
