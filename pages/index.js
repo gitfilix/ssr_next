@@ -4,26 +4,34 @@ import MainLayout from '../components/layouts/mainLayout'
 
 class Home extends Component {
   // getInitialProps is executing on server first and is always expect an object
-  static getInitialProps() {
-    const  request = axios.get('http://jsonplaceholder.typicode.com/users/1')
-                      .then (response => {
-                        console.log('response', response.data);
-                      })
-    console.log('getInitialProps');
+  static async getInitialProps() {
+    let userData;
+
+    try {
+      const response = await axios.get('http://jsonplaceholder.typicode.com/users/1')
+      userData = response.data
+      console.log('userData', userData);
+    } catch {
+      console.error('getInitialProps Error');
+    }
+
 
     return {
       user: {
         name: 'Francis',
         lastname: 'Jones'
-      }
+      },
+      userData: userData
     }
   }
 
+  // constructor first thing on the client side
   constructor(props) {
     super(props)
 
     this.state = {
-      user: this.props.user
+      user: this.props.user,
+      userData: this.props.userData
     }
   }
 
