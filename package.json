@@ -1,0 +1,30 @@
+{
+  "name": "ssr_next",
+  "version": "1.0.0",
+  "description": "ssr_next",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitfilix/ssr_next.git"
+  },
+  "keywords": [
+    "filix",
+    "test"
+  ],
+  "author": "felix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitfilix/ssr_next/issues"
+  },
+  "homepage": "https://github.com/gitfilix/ssr_next#readme",
+  "dependencies": {
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
