@@ -1,12 +1,26 @@
 import React, { Component } from 'react'
-import Header from '../components/includes/header'
+import MainLayout from '../components/layouts/mainLayout'
 
 class Home extends Component {
+  // getInitialProps is always expect an object
+  static getInitialProps() {
+    console.log('getInitialProps');
+
+    return {}
+  }
+
+  constructor() {
+    super()
+
+    console.log('constructor');
+  }
+
   render() {
     return (
       <>
-        <Header />
-        <h1>Welcome to my new next.js page</h1>
+        <MainLayout>
+          <h1>Welcome to my new next.js page</h1>
+        </MainLayout>
       </>
     )
   }
