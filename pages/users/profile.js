@@ -21,7 +21,7 @@ class Profile extends Component {
   showUser = (user) => (
     <div>
       <div>Name: {user.name}</div>
-      <div>lastname: </div>
+      <div>username: {user.username}</div>
       <div>e-mail: {user.email}</div>
     </div>
   )
@@ -30,6 +30,8 @@ class Profile extends Component {
     console.log('user', this.props);
     return(
       <MainLayout>
+      <h1>User Profile</h1>
+      <br />
         {this.showUser(this.props.user)}
       </MainLayout>
     )
