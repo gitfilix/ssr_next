@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import MainLayout from '../components/layouts/mainLayout'
+import Link from 'next/Link'
 import myStyles from '../myStyles/main.css'
 
 
@@ -10,7 +11,7 @@ class Home extends Component {
     let userData;
 
     try {
-      const response = await axios.get('http://jsonplaceholder.typicode.com/users/1')
+      const response = await axios.get('http://jsonplaceholder.typicode.com/users')
       userData = response.data
       console.log('userData', userData);
     } catch {
@@ -38,11 +39,25 @@ class Home extends Component {
     }
   }
 
+  renderUserList = (users) => (
+    users.map( (user, i)=>(
+      <li className='list-group-item' key={i} >
+        <Link href={`/users/profile?userId=${user.id}`}>
+          <a>{user.name}</a>
+        </Link>
+      </li>
+    ))
+  )
+
   render() {
     return (
       <>
         <MainLayout>
           <h1 className={myStyles.stupid}>Welcome to my new next.js page</h1>
+          <h2>Pick a user</h2>
+          <ul className='list-group'>
+            {this.renderUserList(this.props.userData)}
+          </ul>
         </MainLayout>
       </>
     )

@@ -5,3 +5,10 @@
 
 
 getInitialProps  is for server side
+
+
+font-family: 'Major Mono Display', monospace;
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Cormorant Unicase', serif;
+
+https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css

@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
+import MainLayout from '../../components/layouts/mainLayout';
 
+// classbased component
+class Profile extends Component {
+  static async getInitialProps({query}) {
+    console.log('user query', query);
+    return {}
+  }
 
-// functional Component
-const Profile = (props) => {
-    console.log('profile props', props);
-    return (
-      <>
-        <h1>profile user page</h1>
-      </>
+  render() {
+    return(
+      <MainLayout>
+      something>>
+      </MainLayout>
     )
-}
-
-// get access to context data with getInitialProps
-Profile.getInitialProps = async ({req}) => {
-  return { values: '1, 2, 3'}
+  }
 }
 
 export default Profile
