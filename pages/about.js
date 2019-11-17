@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MainLayout from '../components/layouts/mainLayout'
+import Message from '../components/includes/Message'
 
 class About extends Component {
   render() {
@@ -7,6 +8,7 @@ class About extends Component {
       <>
         <MainLayout>
           <h1>About</h1>
+          <Message />
         </MainLayout>
       </>
     )
