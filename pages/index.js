@@ -13,12 +13,12 @@ class Home extends Component {
     try {
       const response = await axios.get('http://jsonplaceholder.typicode.com/users')
       userData = response.data
-      console.log('userData', userData);
+      // console.log('userData', userData);
     } catch {
       console.error('getInitialProps Error');
     }
 
-    console.log('context', context);
+    // console.log('context', context);
 
     return {
       user: {

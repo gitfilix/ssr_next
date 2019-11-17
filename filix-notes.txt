@@ -6,6 +6,7 @@
 
 getInitialProps  is for server side
 
+next.config.js: basic next configuration for modules, ...
 
 font-family: 'Major Mono Display', monospace;
 font-family: 'Big Shoulders Display', cursive;
