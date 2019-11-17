@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// withRouter as fun
 import  { withRouter } from 'next/router';
 
 const Message = (props) => {

@@ -18,8 +18,6 @@ class Home extends Component {
       console.error('getInitialProps Error');
     }
 
-    // console.log('context', context);
-
     return {
       user: {
         name: 'Francis',
